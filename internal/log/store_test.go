@@ -10,13 +10,13 @@ import (
 
 var (
 	write = []byte("hello world")
-	width = uint64(len(write)) + lenWidth
+	width = uint64(len(write)) + uint64(lenWidth)
 )
 
 func TestStore(t *testing.T) {
 	file, err := ioutil.TempFile("", "store_test")
-	require.NoError(t, err)
 	defer os.Remove(file.Name())
+	require.NoError(t, err)
 	store, err := newStore(file)
 	require.NoError(t, err)
 	testAppend(t, store)

@@ -1,0 +1,5 @@
+A API ira guardar "records" em arquivos de forma a manter logs de aplicacoes
+A struct record possui 2 atributos,
+- Valor -> conteudo do record
+- Offset -> Posicao?
+
